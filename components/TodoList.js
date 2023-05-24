@@ -113,12 +113,11 @@ export default function TodoList() {
         field: 'duedate',
         headerName: 'Due Date',
         type: 'date',
-        minWidth: 150,
         editable: true,
+        minWidth: 150,
         valueGetter: (params) => new Date(params.value),
         preProcessEditCellProps: (params) => {
           const hasError = new Date(params.props.value) < new Date(params.row.startdate);
-          console.log(hasError);
           return { ...params.props, error: hasError };
         },    
     },
