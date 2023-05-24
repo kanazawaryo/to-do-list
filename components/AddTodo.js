@@ -46,9 +46,6 @@ export default function AddTodo() {
         id="title"
         label="Title"
         variant="outlined" 
-        InputLabelProps={{
-          shrink: true,
-        }}
         value={title}
         onChange={ e => setTitle(e.target.value) }
       />
@@ -58,9 +55,6 @@ export default function AddTodo() {
         id="description" 
         label="Description" 
         variant="outlined" 
-        InputLabelProps={{
-          shrink: true,
-        }}
         value={description}
         onChange={ e => setDescription(e.target.value) }
       />
