@@ -135,11 +135,13 @@ export default function TodoList() {
         if (isInEditMode) {
           return [
             <GridActionsCellItem
+              key={1}
               icon={<SaveIcon />}
               label="Save"
               onClick={handleSaveClick(id)}
             />,
             <GridActionsCellItem
+              key={2}
               icon={<CancelIcon />}
               label="Cancel"
               className="textPrimary"
@@ -151,6 +153,7 @@ export default function TodoList() {
 
         return [
           <GridActionsCellItem
+            key={3}
             icon={<EditIcon />}
             label="Edit"
             className="textPrimary"
@@ -158,6 +161,7 @@ export default function TodoList() {
             color="inherit"
           />,
           <GridActionsCellItem
+            key={4}
             icon={<DeleteIcon />}
             label="Delete"
             onClick={handleDeleteClick(id)}
